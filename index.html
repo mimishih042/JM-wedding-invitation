@@ -15,9 +15,10 @@
         <div class="preloader">
             <div class="counter">0</div>
         </div>
+        <!-- <img src="assets/char2.png" alt="囍" class="logo"> -->
 
         <div class="flip-card">
-            <div class="flip-card-inner">
+            <div class="flip-card-inner" onclick="handleOnClick()">
                 <div class="flip-card-front">
                     <img src="assets/card1-front.png" alt="card-front">
                 </div>
@@ -43,7 +44,19 @@
       integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
       crossorigin="anonymous"
     ></script>
-    <script src="index.js"></script>
+    <script>
+        let isCardFront = true;
+        let flipCardInner = $('.flip-card-inner');
+
+        function handleOnClick () {
+            if(isCardFront) {
+                flipCardInner.css("transform", "rotateY(180deg)");
+            } else {
+                flipCardInner.css("transform", "rotateY(0deg)");
+            }
+            isCardFront = !isCardFront;
+        }
+    </script>
     <script src="timer.js"></script>
     <script src="counter.js"></script>
 </body>

@@ -4,6 +4,12 @@
     font-weight: 400;
 }
 
+html {
+    background-color: black;
+    cursor: url(assets/star.png) 15 15, auto;
+    font-family: 'NeueMachina';
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -35,7 +41,6 @@ body {
 }
   
 .counter{
-    font-family: 'NeueMachina';
     position: relative;
     color: white;
     font-size: 1.5rem;
@@ -43,24 +48,32 @@ body {
 }
   
 .counter:before{
-    font-family: 'NeueMachina';
     content: 'Loading Wedding Invitation ';
     font-size: 1.5rem;
 }
 
-html {
-    background-color: black;
-    cursor: url(assets/star.png) 15 15, auto;
-}
-
-img {
-    height: 94vh;
+.logo {
+    position: fixed;
+    width: 70px;
+    top: 10px;
+    left: 10px;
 }
 
 .flip-card {
     background-color: transparent;
     /* border: 1px solid #f1f1f1; */
     perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+.flip-card img {
+    margin-top: 1vh;
+    height: 93vh;
+}
+
+.flip-card img:hover {
+    margin-top: 0;
+    height: 95vh;
+    transition: transform 0.5s;
 }
 
 /* This container is needed to position the front and back side */
@@ -71,11 +84,6 @@ img {
     text-align: center;
     transition: transform 1.2s;
     transform-style: preserve-3d;
-}
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
 }
 
 /* Position the front and back side */
@@ -114,8 +122,13 @@ img {
     #countdown {
         display: none;
     }
-    img {
+
+    .flip-card img {
         width: 100%;
         height: auto;
+    }
+
+    .flip-card:active .flip-card-inner {
+        transform: rotateY(180deg);
     }
 }
