@@ -1,0 +1,100 @@
+@font-face {
+    font-family: 'NeueMachina';
+    src: url('NeueMachina-Regular.woff') format('truetype');
+    font-weight: 400;
+}
+
+.preloader{
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    background: #ac936e;
+    z-index: 10;
+}
+  
+.preloader.active{
+    transition: ease-in-out 3s;
+    /* transform: translateY(100vh); */
+    opacity: 0;
+    visibility: hidden;
+}
+  
+.preloader:before{
+    position: absolute;
+    font-size: 4em;
+    color: white;
+}
+  
+.counter{
+    font-family: 'NeueMachina';
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    z-index: 100;
+}
+  
+.counter:before{
+    font-family: 'NeueMachina';
+    content: 'Loading Wedding Invitation ';
+    font-size: 1.5rem;
+}
+
+html {
+    background-color: black;
+    cursor: url(star.png) 15 15, auto;
+}
+
+img {
+    height: 94vh;
+}
+
+.flip-card {
+    background-color: transparent;
+    /* border: 1px solid #f1f1f1; */
+    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+
+/* Style the back side */
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+#countdown {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #e8e2d8;
+    color: #7f6c4f;
+    font-family: 'NeueMachina';
+    font-size: 24px;
+    padding: 8px;
+}
