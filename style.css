@@ -4,6 +4,11 @@
     font-weight: 400;
 }
 
+body {
+    margin: 0;
+    padding: 0;
+}
+
 .preloader{
     position: fixed;
     top: 0;
@@ -17,7 +22,7 @@
 }
   
 .preloader.active{
-    transition: ease-in-out 3s;
+    transition: ease-in-out 4s;
     /* transform: translateY(100vh); */
     opacity: 0;
     visibility: hidden;
@@ -39,7 +44,7 @@
   
 .counter:before{
     font-family: 'NeueMachina';
-    content: 'Loading JM Wedding Invitation ';
+    content: 'Loading Wedding Invitation ';
     font-size: 1.5rem;
 }
 
@@ -64,7 +69,7 @@ img {
     width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 1s;
+    transition: transform 1.2s;
     transform-style: preserve-3d;
 }
 
@@ -97,4 +102,20 @@ img {
     font-family: 'NeueMachina';
     font-size: 24px;
     padding: 8px;
+}
+
+@media (max-width: 600px) {
+    .counter {
+        font-size: 1rem;
+    }
+    .counter::before {
+        font-size: 1rem;
+    }
+    #countdown {
+        display: none;
+    }
+    img {
+        width: 100%;
+        height: auto;
+    }
 }
