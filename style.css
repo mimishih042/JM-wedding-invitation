@@ -6,7 +6,7 @@
 
 html {
     background-color: black;
-    cursor: url(assets/star.png) 15 15, auto;
+    cursor: url(assets/star.png) 50 45, auto;
     font-family: 'NeueMachina';
 }
 
@@ -52,11 +52,37 @@ body {
     font-size: 1.5rem;
 }
 
-.logo {
+.options {
     position: fixed;
-    width: 70px;
+    display: flex;
+    flex-direction: column;
     top: 10px;
     left: 10px;
+}
+
+.option {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3px;
+}
+
+.option:hover {
+    border-radius: 30px;
+}
+
+.option-one {
+    background-color: #f84527;
+}
+
+.option-two {
+    background-color: #ffb511;
+}
+
+.option-three {
+    background-color: white;
 }
 
 .flip-card {
@@ -136,5 +162,40 @@ body {
 
     .flip-card:active .flip-card-inner {
         transform: rotateY(180deg);
+    }
+
+    /* click options */
+    .options {
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        top: 2vh;
+        left: 2vw;
+        z-index: 5;
+    }
+    
+    .option {
+        width: 30px;
+        height: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 3px;
+    }
+    
+    .option:hover {
+        border-radius: 20px;
+    }
+    
+    .option-one {
+        background-color: #f84527;
+    }
+    
+    .option-two {
+        background-color: #ffb511;
+    }
+    
+    .option-three {
+        background-color: white;
     }
 }

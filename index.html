@@ -15,12 +15,17 @@
         <div class="preloader">
             <div class="counter">0</div>
         </div>
+        <div class="options">
+            <div class="option option-one" onclick="onClickBtn('assets/card1-front.png')"></div>
+            <div class="option option-two" onclick="onClickBtn('assets/card2-front.png')"></div>
+            <div class="option option-three" onclick="onClickBtn('assets/card3-front.png')"></div>
+        </div>
         <!-- <img src="assets/char2.png" alt="囍" class="logo"> -->
 
         <div class="flip-card">
-            <div class="flip-card-inner" onclick="handleOnClick()">
+            <div class="flip-card-inner" onclick="handleCardOnClick()">
                 <div class="flip-card-front">
-                    <img src="assets/card1-front.png" alt="card-front">
+                    <img src="assets/card1-front.png" alt="card-front" class="card-front-image">
                 </div>
                 <div class="flip-card-back">
                     <img src="assets/card1-back.png" alt="card-back">
@@ -48,13 +53,18 @@
         let isCardFront = true;
         let flipCardInner = $('.flip-card-inner');
 
-        function handleOnClick () {
+        function handleCardOnClick () {
             if(isCardFront) {
                 flipCardInner.css("transform", "rotateY(180deg)");
             } else {
                 flipCardInner.css("transform", "rotateY(0deg)");
             }
             isCardFront = !isCardFront;
+        }
+
+        let cardFrontImage = $('.card-front-image');
+        function onClickBtn (image) {
+            cardFrontImage.attr("src", image);
         }
     </script>
     <script src="timer.js"></script>
