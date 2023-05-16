@@ -194,7 +194,7 @@ body {
         position: fixed;
         display: flex;
         flex-direction: row;
-        top: 92vh;
+        top: 90%;
         left: 40vw;
         z-index: 5;
     }
