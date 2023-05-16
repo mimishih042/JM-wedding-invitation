@@ -85,6 +85,14 @@ body {
     background-color: white;
 }
 
+.lookbook {
+    display: none;
+}
+
+.lookbook:hover {
+    background-color: white;
+}
+
 .flip-card {
     background-color: transparent;
     /* border: 1px solid #f1f1f1; */
@@ -139,6 +147,18 @@ body {
 }
 
 @media (max-width: 600px) {
+    .lookbook {
+        display: block;
+        font-size: 1.5rem;
+        position: fixed;
+        z-index: 5;
+        padding: 4px 4px 3px 4px;
+        top: 2vh;
+        right: 2vw;
+        color: #ac936e;
+        border: 2px solid #ac936e;
+    }
+
     .counter {
         font-size: 1rem;
     }
@@ -181,10 +201,6 @@ body {
         justify-content: center;
         align-items: center;
         margin-bottom: 3px;
-    }
-    
-    .option:hover {
-        border-radius: 20px;
     }
     
     .option-one {

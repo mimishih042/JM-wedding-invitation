@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>JM wedding invitation</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="icon" type="image/png" href="assets/jm.png"/>
+    <link rel="icon" type="image/png" href="assets/jm.png" />
 </head>
 
 <body>
@@ -20,6 +20,7 @@
             <div class="option option-two" onclick="onClickBtn('assets/card2-front.png')"></div>
             <div class="option option-three" onclick="onClickBtn('assets/card3-front.png')"></div>
         </div>
+        <div class="lookbook" onclick="handleCardOnClick()">CLICK TO FLIP</div>
         <!-- <img src="assets/char2.png" alt="囍" class="logo"> -->
 
         <div class="flip-card">
@@ -34,27 +35,21 @@
         </div>
         <marquee id="countdown"></marquee>
     </main>
-    <script
-      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
-      integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
-      integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
-      crossorigin="anonymous"
-    ></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
     <script>
         let isCardFront = true;
         let flipCardInner = $('.flip-card-inner');
 
-        function handleCardOnClick () {
-            if(isCardFront) {
+        function handleCardOnClick() {
+            if (isCardFront) {
                 flipCardInner.css("transform", "rotateY(180deg)");
             } else {
                 flipCardInner.css("transform", "rotateY(0deg)");
@@ -63,7 +58,7 @@
         }
 
         let cardFrontImage = $('.card-front-image');
-        function onClickBtn (image) {
+        function onClickBtn(image) {
             cardFrontImage.attr("src", image);
         }
     </script>
