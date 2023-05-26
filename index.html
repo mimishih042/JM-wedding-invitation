@@ -61,8 +61,10 @@
         let cardFrontImage = $('.card-front-image');
         function onClickBtn(image) {
             cardFrontImage.attr("src", image);
+            if (!isCardFront) {
+                flipCardInner.css("transform", "rotateY(0deg)");
+            }
         }
-
     </script>
     <script src="timer.js"></script>
     <script src="counter.js"></script>

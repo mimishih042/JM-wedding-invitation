@@ -206,7 +206,7 @@ body {
         display: flex;
         justify-content: center;
         align-items: center;
-        margin-bottom: 3px;
+        margin-right: 3px;
     }
     
     .option-one {
@@ -218,7 +218,7 @@ body {
     }
     
     .option-three {
-        background-color: white;
+        background-color: #e2ddd3;
     }
 
 }
